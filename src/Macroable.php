@@ -9,6 +9,8 @@ use Closure;
 use ReflectionClass;
 use ReflectionMethod;
 
+use function sprintf;
+
 trait Macroable
 {
     /**
@@ -21,9 +23,8 @@ trait Macroable
     /**
      * Register a custom macro.
      *
-     * @param  string           $name   Name.
-     * @param  object|callable  $macro  Macro.
-     * @return void
+     * @param  string          $name  Name.
+     * @param  object|callable $macro Macro.
      */
     public static function macro(string $name, $macro): void
     {
@@ -33,31 +34,31 @@ trait Macroable
     /**
      * Mix another object into the class.
      *
-     * @param  object  $mixin   Mixin.
-     * @param  bool    $replace Replace.
-     * @return void
+     * @param  object $mixin   Mixin.
+     * @param  bool   $replace Replace.
      *
      * @throws ReflectionException
      */
-    public static function mixin($mixin, bool $replace = true): void
+    public static function mixin(object $mixin, bool $replace = true): void
     {
         $methods = (new ReflectionClass($mixin))->getMethods(
             ReflectionMethod::IS_PUBLIC | ReflectionMethod::IS_PROTECTED
         );
 
         foreach ($methods as $method) {
-            if ($replace || ! static::hasMacro($method->name)) {
-                $method->setAccessible(true);
-                static::macro($method->name, $method->invoke($mixin));
+            if (! $replace && static::hasMacro($method->name)) {
+                continue;
             }
+
+            $method->setAccessible(true);
+            static::macro($method->name, $method->invoke($mixin));
         }
     }
 
     /**
      * Checks if macro is registered.
      *
-     * @param  string  $name Name
-     * @return bool
+     * @param  string $name Name
      */
     public static function hasMacro(string $name): bool
     {
@@ -67,8 +68,9 @@ trait Macroable
     /**
      * Dynamically handle calls to the class.
      *
-     * @param  string  $method     Method.
-     * @param  array   $parameters Parameters.
+     * @param  string $method     Method.
+     * @param  array  $parameters Parameters.
+     *
      * @return mixed
      *
      * @throws BadMethodCallException
@@ -77,7 +79,9 @@ trait Macroable
     {
         if (! static::hasMacro($method)) {
             throw new BadMethodCallException(sprintf(
-                'Method %s::%s does not exist.', static::class, $method
+                'Method %s::%s does not exist.',
+                static::class,
+                $method
             ));
         }
 
@@ -93,8 +97,9 @@ trait Macroable
     /**
      * Dynamically handle calls to the class.
      *
-     * @param  string  $method     Method.
-     * @param  array   $parameters Parameters.
+     * @param  string $method     Method.
+     * @param  array  $parameters Parameters.
+     *
      * @return mixed
      *
      * @throws BadMethodCallException
@@ -103,7 +108,9 @@ trait Macroable
     {
         if (! static::hasMacro($method)) {
             throw new BadMethodCallException(sprintf(
-                'Method %s::%s does not exist.', static::class, $method
+                'Method %s::%s does not exist.',
+                static::class,
+                $method
             ));
         }
 
