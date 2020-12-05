@@ -59,7 +59,6 @@ $macroableClass = new class() {
     use Macroable;
 };
 
-
 $macroableClass::macro('concatenate', function(... $strings) {
    return implode('-', $strings);
 });
