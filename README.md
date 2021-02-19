@@ -9,12 +9,6 @@ Macroable Component is a trait that, gives you the ability in effect to add new 
 
 <br>
 
-* [Installation](#installation)
-* [Usage](#usage)
-* [Methods](#methods)
-* [Tests](#tests)
-* [License](#license)
-
 ### Installation
 
 #### With [Composer](https://getcomposer.org)
@@ -23,136 +17,9 @@ Macroable Component is a trait that, gives you the ability in effect to add new 
 composer require atomastic/macroable
 ```
 
-### Usage
+### Resources
+* [Documentation](https://atomastic.com/components/macroable)
 
-```php
-use Atomastic\Macroable\Macroable;
-```
-
-### Methods
-
-| Method | Description |
-|---|---|
-| <a href="#macroable_macro">`macro()`</a> | Register a custom macro. |
-| <a href="#macroable_mixin">`mixin()`</a> | Mix another object into the class. |
-| <a href="#macroable_hasMacro">`hasMacro()`</a> | Checks if macro is registered. |
-
-#### Methods Details
-
-##### <a name="macroable_macro"></a> Method: `macro()`
-
-```php
-/**
- * Register a custom macro.
- *
- * @param  string           $name   Name.
- * @param  object|callable  $macro  Macro.
- * @return void
- */
-public static function macro(string $name, $macro): void
-```
-
-##### Example
-
-```php
-$macroableClass = new class() {
-    use Macroable;
-};
-
-$macroableClass::macro('concatenate', function(... $strings) {
-   return implode('-', $strings);
-});
-
-$macroableClass::macro('message', function($name) {
-   return 'Hello ' . $name;
-});
-
-echo $macroableClass->concatenate('one', 'two', 'three');
-echo $macroableClass->message('Jack');
-```
-
-##### The above example will output:
-
-```
-one-two-three
-Hello Jack
-```
-
-##### <a name="macroable_mixin"></a> Method: `mixin()`
-
-```php
-/**
- * Mix another object into the class.
- *
- * @param  object  $mixin   Mixin.
- * @param  bool    $replace Replace.
- * @return void
- *
- * @throws ReflectionException
- */
-public static function mixin($mixin, bool $replace = true): void
-```
-
-##### Example
-
-```php
-$mixinClass = new class() {
-    public function mixinMethod()
-    {
-       return function() {
-          return 'mixinMethod';
-       };
-    }
-
-    public function anotherMixinMethod()
-    {
-       return function() {
-          return 'anotherMixinMethod';
-       };
-    }
-};
-
-$macroableClass->mixin($mixin);
-
-$macroableClass->mixinMethod();
-$macroableClass->anotherMixinMethod();
-```
-
-##### The above example will output:
-
-```
-mixinMethod
-anotherMixinMethod
-```
-
-
-##### <a name="macroable_hasMacro"></a> Method: `hasMacro()`
-
-```php
-/**
- * Checks if macro is registered.
- *
- * @param  string  $name Name
- * @return bool
- */
-public static function hasMacro(string $name): bool
-```
-
-##### Example
-
-```php
-$macroableClass = new class() {
-    use Macroable;
-};
-
-$macroableClass::macro('message', function($name) {
-   return 'Hello ' . $name;
-});
-
-if ($macroableClass::hasMacro('message')) {
-    // do something...
-}
-```
 
 ### Tests
 

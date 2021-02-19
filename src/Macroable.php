@@ -18,7 +18,7 @@ trait Macroable
      *
      * @var array
      */
-    protected static $macros = [];
+    protected static array $macros = [];
 
     /**
      * Register a custom macro.
