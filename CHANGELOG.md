@@ -1,3 +1,7 @@
+<a name="3.0.1"></a>
+# [3.0.1](https://github.com/glowyphp/macroable) (2021-12-22)
+* Fix dependencies.
+
 <a name="3.0.0"></a>
 # [3.0.0](https://github.com/glowyphp/macroable) (2021-12-22)
 * Released under Glowy PHP Organization
