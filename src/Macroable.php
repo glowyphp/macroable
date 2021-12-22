@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Atomastic\Macroable;
+namespace Glowy\Macroable;
 
 use BadMethodCallException;
 use Closure;

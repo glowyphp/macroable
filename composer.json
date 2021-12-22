@@ -1,13 +1,13 @@
 {
-    "name": "atomastic/macroable",
+    "name": "glowy/macroable",
     "description": "Macroable Component is a trait that, gives you the ability in effect to add new methods to a class at runtime.",
     "license": "MIT",
     "keywords": [
-        "Macroable", "macroable", "php", "atomastic"
+        "Macroable", "macroable", "php", "glowy"
     ],
     "support": {
-      "source": "https://github.com/atomastic/macroable",
-      "issues": "https://github.com/atomastic/macroable/issues"
+      "source": "https://github.com/glowyphp/macroable",
+      "issues": "https://github.com/glowyphp/macroable/issues"
     },
     "authors": [
         {
@@ -21,7 +21,7 @@
     },
     "autoload":{
         "psr-4": {
-            "Atomastic\\Macroable\\": "src/"
+            "Glowy\\Macroable\\": "src/"
         }
     },
     "require-dev": {

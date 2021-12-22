@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-use Atomastic\Macroable\Macroable;
+use Glowy\Macroable\Macroable;
 
 beforeEach(function (): void {
     $this->EmptyMacroable = new class() {
