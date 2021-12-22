@@ -3,7 +3,7 @@
     "description": "Macroable Component is a trait that, gives you the ability in effect to add new methods to a class at runtime.",
     "license": "MIT",
     "keywords": [
-        "Macroable", "macroable", "php", "glowy"
+        "Macroable", "macroable", "php", "glowy", "glowyphp"
     ],
     "support": {
       "source": "https://github.com/glowyphp/macroable",
@@ -27,6 +27,7 @@
     "require-dev": {
         "doctrine/coding-standard": "9.0.0",
         "pestphp/pest": "^1.21.1",
-        "phpstan/phpstan": "^1.2.0"
+        "phpstan/phpstan": "^1.2.0",
+        "symfony/var-dumper": "^5.4.0",
     }
 }
