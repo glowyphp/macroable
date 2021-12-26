@@ -96,3 +96,19 @@ test('test Class Based Macros No Replace', function (): void {
     $this->TestMacroable::mixin(new $this->TestMixin);
     $this->assertSame('foo', $instance->methodThree());
 });
+
+test('test flush macros', function (): void {
+    $this->TestMacroable::macro('flushMethod', function () {
+        return 'flushMethod';
+    });
+
+    $instance = new $this->TestMacroable;
+
+    $this->assertSame('flushMethod', $instance->flushMethod());
+
+    $this->TestMacroable::flushMacros();
+
+    $this->expectException(BadMethodCallException::class);
+
+    $instance->flushMethod();
+});
