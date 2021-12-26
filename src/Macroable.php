@@ -66,6 +66,16 @@ trait Macroable
     }
 
     /**
+     * Flush the existing macros.
+     *
+     * @return void
+     */
+    public static function flushMacros()
+    {
+        static::$macros = [];
+    }
+
+    /**
      * Dynamically handle calls to the class.
      *
      * @param  string $method     Method.
