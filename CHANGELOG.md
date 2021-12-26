@@ -1,3 +1,7 @@
+<a name="3.1.0"></a>
+# [3.1.0](https://github.com/glowyphp/macroable) (2021-12-26)
+* Added `flushMacros` method.
+
 <a name="3.0.1"></a>
 # [3.0.1](https://github.com/glowyphp/macroable) (2021-12-22)
 * Fix dependencies.
