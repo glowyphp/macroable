@@ -18,7 +18,7 @@ composer require glowy/macroable
 ```
 
 ### Resources
-* [Documentation](https://digital.flextype.org/glowyphp/packages/macroable)
+* [Documentation](https://awilum.github.io/glowyphp/macroable)
 
 
 ### Tests
