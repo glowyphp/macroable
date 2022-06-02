@@ -5,14 +5,9 @@ Macroable Package is a trait that, gives you the ability in effect to add new me
 
 <p align="center">
 <a href="https://github.com/glowyphp/macroable
-/releases"><img alt="Version" src="https://img.shields.io/github/release/glowyphp/macroable
-.svg?label=version&style=for-the-badge"></a>
-<a href="https://github.com/glowyphp/macroable
-"><img src="https://img.shields.io/badge/license-MIT-blue.svg?style=for-the-badge" alt="License"></a>
-<a href="https://packagist.org/packages/glowy/macroable
-"><img src="https://poser.pugx.org/glowy/macroable
-/downloads?style=for-the-badge" alt="Total downloads"></a><img src="http://poser.pugx.org/glowy/macroable
-/require/php?style=for-the-badge">
+/releases"><img alt="Version" src="https://img.shields.io/github/release/glowyphp/macroable.svg?label=version&style=for-the-badge"></a>
+<a href="https://github.com/glowyphp/macroable"><img src="https://img.shields.io/badge/license-MIT-blue.svg?style=for-the-badge" alt="License"></a>
+<a href="https://packagist.org/packages/glowy/macroable"><img src="https://poser.pugx.org/glowy/macroable/downloads?style=for-the-badge" alt="Totaldownloads"></a><img src="http://poser.pugx.org/glowy/macroable/require/php?style=for-the-badge">
 </p>
 
 <br>
