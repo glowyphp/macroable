@@ -34,4 +34,4 @@ Run tests
 
 ### License
 [The MIT License (MIT)](https://github.com/glowyphp/macroable/blob/master/LICENSE)
-Copyright (c) 2022 [Sergey Romanenko](https://github.com/Awilum)
+Copyright (c) [Sergey Romanenko](https://github.com/Awilum)
