@@ -1,3 +1,7 @@
+<a name="4.0.0"></a>
+# [4.0.0](https://github.com/glowyphp/macroable) (2021-07-02)
+* Moving to PHP 8.1
+
 <a name="3.1.0"></a>
 # [3.1.0](https://github.com/glowyphp/macroable) (2021-12-26)
 * Added `flushMacros` method.
