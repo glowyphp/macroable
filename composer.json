@@ -39,6 +39,6 @@
         "doctrine/coding-standard": "9.0.0",
         "pestphp/pest": "^1.21.1",
         "phpstan/phpstan": "^1.8.0",
-        "symfony/var-dumper": "^6.1.0"
+        "symfony/var-dumper": "^6.*"
     }
 }
