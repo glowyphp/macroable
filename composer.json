@@ -25,6 +25,7 @@
         }
     },
     "config": {
+        "lock": false,
         "apcu-autoloader": true,
         "optimize-autoloader": true,
         "platform-check": false,
