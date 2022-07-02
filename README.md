@@ -4,10 +4,7 @@ Macroable Package is a trait that, gives you the ability in effect to add new me
 </p>
 
 <p align="center">
-<a href="https://github.com/glowyphp/macroable
-/releases"><img alt="Version" src="https://img.shields.io/github/release/glowyphp/macroable.svg?label=version&style=for-the-badge"></a>
-<a href="https://github.com/glowyphp/macroable"><img src="https://img.shields.io/badge/license-MIT-blue.svg?style=for-the-badge" alt="License"></a>
-<a href="https://packagist.org/packages/glowy/macroable"><img src="https://poser.pugx.org/glowy/macroable/downloads?style=for-the-badge" alt="Totaldownloads"></a><img src="http://poser.pugx.org/glowy/macroable/require/php?style=for-the-badge">
+<img src="https://img.shields.io/badge/license-MIT-blue.svg?label=License" alt="License MIT"> <img src="http://poser.pugx.org/glowyphp/macroable/require/php?label=PHP"> <a href="https://packagist.org/packages/glowy/macroable"><img src="https://poser.pugx.org/glowy/macroable/downloads" alt="Total downloads"></a> <img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/glowyphp/macroable?label=Stars"> <img alt="GitHub forks" src="https://img.shields.io/github/forks/glowyphp/macroable?label=Forks"> <a href="https://hitsofcode.com"><img alt="Hits of Code" src="https://hitsofcode.com/github/glowyphp/macroable?branch=4.x"></a> <a href="https://discord.gg/ewQkqgfBAc"><img src="https://img.shields.io/discord/423097982498635778.svg?logo=discord&label=Discord%20Chat" alt="Discord"></a>
 </p>
 
 <br>
