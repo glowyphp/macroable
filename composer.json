@@ -35,6 +35,7 @@
         }
     },
     "require-dev": {
+        "ext-iconv": "*",
         "doctrine/coding-standard": "9.0.0",
         "pestphp/pest": "^1.21.1",
         "phpstan/phpstan": "^1.8.0",
