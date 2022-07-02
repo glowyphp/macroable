@@ -24,10 +24,20 @@
             "Glowy\\Macroable\\": "src/"
         }
     },
+    "config": {
+        "apcu-autoloader": true,
+        "optimize-autoloader": true,
+        "platform-check": false,
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true,
+            "dealerdirect/phpcodesniffer-composer-installer": true
+        }
+    },
     "require-dev": {
         "doctrine/coding-standard": "9.0.0",
         "pestphp/pest": "^1.21.1",
-        "phpstan/phpstan": "^1.2.0",
+        "phpstan/phpstan": "^1.8.0",
         "symfony/var-dumper": "^6.1.0"
     }
 }
