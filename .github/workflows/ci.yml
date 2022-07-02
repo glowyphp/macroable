@@ -30,9 +30,6 @@ jobs:
 
     - name: Install PHP 8.1 dependencies
       run: composer update --${{ matrix.dependency-version }} --no-interaction --no-progress
-
-    - name: Run PHPStan
-      run: ./vendor/bin/phpstan
       
     - name: Run Tests for PHP 8.1
       run: ./vendor/bin/pest --coverage
