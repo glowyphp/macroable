@@ -12,12 +12,12 @@
     "authors": [
         {
             "name": "Sergey Romanenko",
-            "email": "sergey.romanenko@flextype.org",
-            "homepage": "https://github.com/Awilum"
+            "email": "awilum@msn.com",
+            "homepage": "https://awilum.github.io/"
         }
     ],
     "require": {
-        "php": "^7.4 || ^8.0"
+        "php": "^8.1"
     },
     "autoload":{
         "psr-4": {
@@ -28,6 +28,6 @@
         "doctrine/coding-standard": "9.0.0",
         "pestphp/pest": "^1.21.1",
         "phpstan/phpstan": "^1.2.0",
-        "symfony/var-dumper": "^5.4.0"
+        "symfony/var-dumper": "^6.1.0"
     }
 }
