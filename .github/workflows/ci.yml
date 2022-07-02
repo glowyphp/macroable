@@ -44,7 +44,7 @@ jobs:
       run: ./vendor/bin/pest --coverage
       
   support:
-    needs: [tests]
+    needs: [phpstan, tests]
     name: Discord Notification
     runs-on: ubuntu-latest
     steps:
