@@ -16,7 +16,7 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-latest, macos-latest]
-        php: ['7.4', '8.0', '8.1']
+        php: ['8.1']
         dependency-version: [prefer-stable]
 
     steps:
@@ -37,21 +37,9 @@ jobs:
         echo "::add-matcher::${{ runner.tool_cache }}/php.json"
         echo "::add-matcher::${{ runner.tool_cache }}/phpunit.json"
 
-    - name: Install PHP 7 dependencies
-      run: composer update --${{ matrix.dependency-version }} --no-interaction --no-progress
-      if: "matrix.php < 8"
-
     - name: Install PHP 8 dependencies
       if: "matrix.php >= 8"
       run: composer update --${{ matrix.dependency-version }} --no-interaction --no-progress
-
-    - name: Run Tests for PHP 7.4
-      if: "matrix.php == 7.4"
-      run: ./vendor/bin/pest --coverage
-
-    - name: Run Tests for PHP 8.0
-      if: "matrix.php == 8.0"
-      run: ./vendor/bin/pest --coverage
 
     - name: Run Tests for PHP 8.1
       if: "matrix.php == 8.1"
